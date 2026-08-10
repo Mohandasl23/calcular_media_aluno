@@ -84,6 +84,10 @@ Possíveis melhorias
 - Suportar nomes com caracteres acentuados e validação mais robusta (por exemplo, permitir hífens ou apóstrofos quando apropriado).
 - Adicionar testes unitários para validar regras de classificação e validação de entrada.
 
+Autor
+
+- Mohandas Leandro
+
 Contribuição
 
 Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias.
