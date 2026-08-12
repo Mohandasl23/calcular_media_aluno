@@ -12,20 +12,17 @@ def obter_nome():
 
 def obter_notas():
     notas = []
-    for nota in range(1, 4):
-        while True:
-            try:
-                valor_nota = float(input(f"Digite a {nota}ª nota: "))
-                if 0 <= valor_nota <= 10:
-                    notas.append(valor_nota)
-                    break
-                else:
-                    print("Nota inválida. Digite um valor entre 0 e 10.")
-            except ValueError:
-                print("Entrada inválida. Por favor, digite um número.")
-    return notas            
+    while True:
+        try:
+            for nota in range(1, 4):
+                notas.append(float(input(f"Digite a {nota}ª nota: ")))
 
-           
+            if all(0 <= nota <= 10 for nota in notas):
+                return notas
+            else:
+                print("Nota inválida. Digite um valor entre 0 e 10.")
+        except:
+            print("Entrada inválida. Por favor, digite um número.")
 
 
 def calcular_media_aluno():
