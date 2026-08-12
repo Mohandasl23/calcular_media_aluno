@@ -23,9 +23,7 @@ def obter_notas():
                     print("Nota inválida. Digite um valor entre 0 e 10.")
             except ValueError:
                 print("Entrada inválida. Por favor, digite um número.")
-    return notas            
-
-           
+    return notas
 
 
 def calcular_media_aluno():
@@ -36,19 +34,15 @@ def calcular_media_aluno():
     quantidade_alunos = 0
 
     while quantidade_alunos <= 0:
-
         try:
             quantidade_alunos = int(input("Digite a quantidade de alunos: "))
             if quantidade_alunos <= 0:
                 print("Digite um numero maior que 0, tente novamente.")
-
         except:
             print("Entrada inválida. Por favor, digite um numero maior que 0.")
 
     for _ in range(quantidade_alunos):
-
         nome = obter_nome()
-
         notas = obter_notas()
 
         media = sum(notas) / len(notas)
@@ -73,6 +67,7 @@ def calcular_media_aluno():
     print(f"\nAlunos reprovados: {len(alunos_reprovados)}")
     for nome, media in alunos_reprovados:
         print(f"{nome}: {media:.2f}")
+
 
 if __name__ == "__main__":
     calcular_media_aluno()

@@ -1,97 +1,84 @@
-# Desafio 01 — calcular_media_aluno
+﻿# Desafio 01 — Cálculo da média dos alunos
 
-Descrição
+Este projeto contém um script em Python para ler o nome e as três notas de cada aluno, calcular a média e classificar a situação final:
 
-Este repositório contém o script `desafio_01.py`, que lê informações de alunos (nome e três notas), calcula a média de cada aluno e classifica-os em:
 - Aprovado: média >= 7.0
 - Recuperação: 5.0 <= média < 7.0
 - Reprovado: média < 5.0
 
-O programa valida entradas do usuário (quantidade de alunos, nome e notas) e exibe um resumo com a lista de alunos por situação.
+A estrutura do código foi organizada em funções para facilitar a leitura e reutilização, além de usar a construção `if __name__ == "__main__":` para garantir que o programa execute somente quando o arquivo for executado diretamente.
 
 Arquivo principal
 
-- [desafio_01.py](C:/Users/mohan/Desktop/TESTE PYTHON/desafio_01.py)
+- `desafio_01.py`
 
 Requisitos
 
-- Python 3.6 ou superior
-- Não há dependências externas (apenas a biblioteca padrão do Python)
+- Python 3.8 ou superior
+- Biblioteca padrão do Python
 
 Como executar
 
-1. Abra um terminal (Prompt de Comando ou PowerShell) na pasta do projeto:
+1. Abra o terminal na pasta do projeto.
+2. Execute:
 
-   cd "C:\\Users\\mohan\\Desktop\\TESTE PYTHON"
+```bash
+python desafio_01.py
+```
 
-2. Execute o script com Python:
+3. Siga as instruções do programa.
 
-   python desafio_01.py
+Estrutura do código
 
-3. Siga as instruções interativas:
-- Informe a quantidade de alunos (deve ser um inteiro maior que 0).
-- Para cada aluno, digite o nome (apenas letras e espaços) e as três notas (valores numéricos entre 0 e 10).
+O programa agora está dividido em funções:
+
+- `obter_nome()`: valida o nome do aluno.
+- `obter_notas()`: lê e valida as três notas.
+- `calcular_media_aluno()`: controla o fluxo principal do programa.
+
+A execução principal fica assim:
+
+```python
+if __name__ == "__main__":
+    calcular_media_aluno()
+```
+
+Isso significa que:
+
+- se o arquivo for executado diretamente, o programa roda;
+- se o arquivo for importado em outro arquivo Python, a função principal não será executada automaticamente.
 
 Exemplo de execução
 
-(Exemplo de interação — entradas do usuário precedidas por `>`):
-
-Digite a quantidade de alunos: > 3
-
-Aluno 1:
-Digite o nome do aluno: > Maria Silva
-Digite a primeira nota: > 8
-Digite a segunda nota: > 7.5
-Digite a terceira nota: > 6.5
-Maria Silva, Situação Aprovado 7.33
-
-Aluno 2:
-Digite o nome do aluno: > João
-Digite a primeira nota: > 5
-Digite a segunda nota: > 4.5
-Digite a terceira nota: > 6
-João, Situação Recuperação 5.17
-
-Aluno 3:
-Digite o nome do aluno: > Ana
-Digite a primeira nota: > 3
-Digite a segunda nota: > 4
-Digite a terceira nota: > 2
-Ana, Situação Reprovado 3.00
-
-Saída resumida:
+```text
+Digite a quantidade de alunos: 2
+Digite o nome do aluno: Maria Silva
+Digite a 1ª nota: 8
+Digite a 2ª nota: 7
+Digite a 3ª nota: 9
+Maria Silva, Situação Aprovado 8.00
+Digite o nome do aluno: João
+Digite a 1ª nota: 5
+Digite a 2ª nota: 4
+Digite a 3ª nota: 6
+João, Situação Recuperação 5.00
 
 Alunos aprovados: 1
-Maria Silva: 7.33
+Maria Silva: 8.00
 
 Alunos em recuperação: 1
-João: 5.17
+João: 5.00
 
-Alunos reprovados: 1
-Ana: 3.00
+Alunos reprovados: 0
+```
 
-Comportamento e validações
+Validações incluídas
 
-- Quantidade de alunos: somente aceita inteiros maiores que zero. Em caso de valor inválido, solicita novamente.
-- Nome do aluno: exige que a entrada contenha apenas letras e espaços. Strings vazias ou com caracteres inválidos são rejeitadas.
-- Notas: cada nota deve ser um número entre 0 e 10 (inclusive). Entradas não numéricas ou fora do intervalo fazem o programa pedir novamente.
-- As médias são calculadas como a média aritmética simples das três notas e são exibidas com duas casas decimais nos relatórios.
-
-Possíveis melhorias
-
-- Separar a lógica de entrada/saída da lógica de cálculo para facilitar testes automatizados.
-- Adicionar opção para carregar dados de um arquivo CSV/JSON em vez de entrada interativa.
-- Suportar nomes com caracteres acentuados e validação mais robusta (por exemplo, permitir hífens ou apóstrofos quando apropriado).
-- Adicionar testes unitários para validar regras de classificação e validação de entrada.
+- Quantidade de alunos: deve ser um número inteiro maior que zero.
+- Nome do aluno: aceita apenas letras e espaços.
+- Notas: devem estar entre 0 e 10.
+- Em caso de entrada inválida, o programa solicita novamente.
 
 Autor
 
 - Mohandas Leandro
-
-Contribuição
-
-Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias.
-
-Licença
-
-Este projeto está disponível sem uma licença específica — adicione uma licença se desejar compartilhá-lo publicamente.
