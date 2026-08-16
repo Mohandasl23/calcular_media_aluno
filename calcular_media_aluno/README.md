@@ -1,4 +1,4 @@
-﻿# Desafio 01 — Sistema de Classificação de Alunos
+# Desafio 01 — Sistema de Classificação de Alunos
 
 Este projeto implementa um script em Python para registrar alunos, ler suas três notas, calcular a média final e classificar cada aluno conforme o desempenho.
 
