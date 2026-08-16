@@ -68,6 +68,10 @@ Recuperação: 2
 
 - **desafio_01.py** - Script principal contendo todas as funções do sistema
 
+## Autor
+
+**Mohandas Leandro**
+
 ## Licença
 
 Este projeto é fornecido como está para fins educacionais.
